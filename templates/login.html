@@ -7,7 +7,6 @@
 </head>
 <body>
     <div class="login-container">
-        <!-- Imagen arriba del título -->
         <div class="login-logo">
             <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo" />
         </div>
@@ -18,7 +17,6 @@
             <button type="submit">Entrar</button>
         </form>
 
-        <!-- Mensajes -->
         <div id="messages">
             {% with messages = get_flashed_messages(with_categories=true) %}
               {% if messages %}

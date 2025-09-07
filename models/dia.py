@@ -6,7 +6,6 @@ class Dia(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nombre = db.Column(db.String(50), nullable=False)
 
-    # Relación con Plato
     platos = db.relationship("Plato", back_populates="dia")
 
     def __repr__(self):

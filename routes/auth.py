@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 from models.user import User
-from app import db
+from models import db
+
 
 auth_bp = Blueprint("auth", __name__)
 
@@ -16,7 +17,7 @@ def login():
         usuario = User.query.filter_by(cedula=cedula).first()
 
         if usuario:
-            if usuario.pidio:  # 👈 Nuevo control
+            if usuario.pidio:  
                 flash("Ya has hecho una reserva y no puedes ingresar nuevamente.", "error")
                 return redirect(url_for("auth.login"))
 

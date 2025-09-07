@@ -4,7 +4,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
 }
 
 .login-container {
@@ -13,10 +15,11 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
-    width: 300px;
+    width: 100%;
+    max-width: 360px;
 }
 
-/* Imagen del logo */
+/* Logo */
 .login-logo img {
     width: 120px;
     height: auto;
@@ -26,36 +29,38 @@ body {
 /* Inputs */
 input[type="text"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 1rem 0;
-    border: 1px solid #888B8D; /* gris Essity */
+    border: 1px solid #888B8D;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 input[type="text"]:focus {
     outline: none;
-    border: 1px solid #009AFF; /* azul claro Essity */
+    border: 1px solid #009AFF;
     box-shadow: 0 0 5px rgba(0,154,255,0.4);
 }
 
-/* Botón principal */
+/* Botón */
 button {
     width: 100%;
-    padding: 10px;
-    background: #00005A; /* azul Essity */
+    padding: 12px;
+    background: #00005A;
     border: none;
     color: #fff;
     font-weight: bold;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #0000C3; /* azul medio Essity */
+    background: #0000C3;
 }
 
-/* Mensajes de alerta */
+/* Alertas */
 .alert {
     margin-top: 1rem;
     padding: 0.8rem;
@@ -65,8 +70,8 @@ button:hover {
 
 .alert.error {
     background: #FFCCCC;
-    color: #F50082; /* fucsia Essity */
-    border: 1px solid #FF8200; /* naranja Essity */
+    color: #F50082;
+    border: 1px solid #FF8200;
     animation: fadeIn 0.5s;
 }
 
@@ -74,4 +79,27 @@ button:hover {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* 🔹 Responsive */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    .login-logo img {
+        width: 90px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
+
 

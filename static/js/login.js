@@ -5,6 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
             msg.style.opacity = "0";
             msg.style.transition = "opacity 0.5s ease";
             setTimeout(() => msg.remove(), 500);
-        }, 3000); // desaparece a los 3 segundos
+        }, 3000); 
     });
 });

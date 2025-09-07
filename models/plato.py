@@ -7,7 +7,6 @@ class Plato(db.Model):
     nombre = db.Column(db.String(100), nullable=False)
     dia_id = db.Column(db.Integer, db.ForeignKey("dias.id"), nullable=False)
 
-    # Relación con Dia (solo definimos la relación aquí, sin backref duplicado)
     dia = db.relationship("Dia", back_populates="platos")
 
     semana = db.Column(db.String(10), nullable=False)  
