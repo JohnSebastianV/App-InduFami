@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Imagen arriba del título -->
+        <div class="login-logo">
+            <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo" />
+        </div>
+
+        <h2>Ingreso</h2>
+        <form method="POST" action="{{ url_for('auth.login') }}">
+            <input type="text" name="cedula" placeholder="Ingrese su cédula" required>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <!-- Mensajes -->
+        <div id="messages">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                  <div class="alert {{ category }}">{{ message }}</div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

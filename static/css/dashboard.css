@@ -1,0 +1,113 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #00005A; /* azul Essity */
+}
+
+h2 {
+    margin-top: 20px;
+    color: #0000C3; /* azul medio Essity */
+}
+
+/* Contenedor de días: horizontal */
+.dias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+/* Bloque de cada día */
+.dia-bloque {
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor de platos: vertical */
+.platos-container {
+    display: flex;
+    flex-direction: column; /* 🔥 los platos en columna */
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* Labels de selección */
+.dia-label, .plato-label {
+    background: #ecf0f1;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    border: 1px solid #888B8D; /* gris Essity */
+}
+
+.dia-label:hover, .plato-label:hover {
+    background: #009AFF; /* azul claro Essity */
+    color: #fff;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+/* Botón genérico */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #00005A; /* azul Essity */
+    color: #fff;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0000C3; /* azul medio Essity */
+}
+
+/* Botón confirmación */
+.confirm-btn {
+    background: #009A44; /* verde Essity */
+}
+
+.confirm-btn:hover {
+    background: #007a36;
+}
+
+/* Títulos de días */
+.dia-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #00005A;
+    border-bottom: 2px solid #FF8200; /* naranja Essity */
+    padding-bottom: 5px;
+}
+
+
+
+

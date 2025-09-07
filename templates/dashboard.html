@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido {{ nombre }}</h1>
+        
+
+
+
+        <section>
+            <h2>Selecciona hasta 3 días:</h2>
+            <div id="dias-container" class="dias-container">
+                {% for dia in dias %}
+                    <label class="dia-label">
+                        <input type="checkbox" name="dias" value="{{ dia.id }}">
+                        {{ dia.nombre }}
+                    </label>
+                {% endfor %}
+            </div>
+            <button class="btn" onclick="cargarPlatos()">Ver platos</button>
+        </section>
+
+        <section>
+            <h2>Platos disponibles:</h2>
+            <div id="platos-container" class="platos-container"></div>
+        </section>
+
+        <button class="btn confirm-btn" onclick="guardarReserva()">Confirmar Reserva</button>
+
+        
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
+
+
+
+
